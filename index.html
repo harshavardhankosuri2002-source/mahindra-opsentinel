@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mahindra Opsentinel AI — Operations Control Tower</title>
+  <meta name="description" content="Predict disruption. Protect production. Conceptual Agentic AI Operations Control Tower for Indian automotive and manufacturing supply chains.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app-root">
+
+    <!-- Collapsible Sidebar Navigation -->
+    <aside class="app-sidebar" id="app-sidebar" aria-label="Main Navigation">
+      <div class="sidebar-header">
+        <a href="#" class="brand-wrapper" id="brand-home-link" onclick="navigateTo('overview'); return false;">
+          <div class="brand-logo" title="Mahindra Opsentinel AI">M</div>
+          <div class="brand-info">
+            <span class="brand-name">OPSENTINEL AI</span>
+            <span class="brand-tag">MAHINDRA MODEL</span>
+          </div>
+        </a>
+        <button class="sidebar-toggle-btn" id="sidebar-toggle" title="Toggle Navigation Sidebar" aria-label="Toggle Navigation">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebar-nav">
+        <div class="nav-section-title">CONTROL TOWER</div>
+        <a class="nav-item active" data-view="overview" href="#overview">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <span class="nav-label">Overview</span>
+        </a>
+        <a class="nav-item" data-view="risk-matrix" href="#risk-matrix">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/><circle cx="17" cy="7" r="3"/></svg></span>
+          <span class="nav-label">Risk Control Tower</span>
+          <span class="nav-badge danger">5</span>
+        </a>
+        <a class="nav-item" data-view="suppliers" href="#suppliers">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <span class="nav-label">Suppliers</span>
+          <span class="nav-badge amber">8</span>
+        </a>
+        <a class="nav-item" data-view="inventory" href="#inventory">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></span>
+          <span class="nav-label">Inventory</span>
+          <span class="nav-badge danger">RED</span>
+        </a>
+        <a class="nav-item" data-view="production" href="#production">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M5 20V8l5 4V8l5 4V4h5v16"/></svg></span>
+          <span class="nav-label">Production</span>
+          <span class="nav-badge amber">94%</span>
+        </a>
+        <a class="nav-item" data-view="logistics" href="#logistics">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span>
+          <span class="nav-label">Logistics</span>
+        </a>
+        <a class="nav-item" data-view="orders" href="#orders">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+          <span class="nav-label">Orders & Delivery</span>
+          <span class="nav-badge amber">2,840</span>
+        </a>
+
+        <div class="nav-section-title">INTELLIGENCE & TWIN</div>
+        <a class="nav-item" data-view="risk-network" href="#risk-network">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></span>
+          <span class="nav-label">Risk Network</span>
+        </a>
+        <a class="nav-item" data-view="risk-propagation" href="#risk-propagation">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7 15 5 5 5-5M12 4v16"/></svg></span>
+          <span class="nav-label">Risk Propagation</span>
+        </a>
+        <a class="nav-item" data-view="scenario-simulator" href="#scenario-simulator">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="21" x2="4" y2="14"/><line x1="4" y1="10" x2="4" y2="3"/><line x1="12" y1="21" x2="12" y2="12"/><line x1="12" y1="8" x2="12" y2="3"/><line x1="20" y1="21" x2="20" y2="16"/><line x1="20" y1="12" x2="20" y2="3"/><line x1="1" y1="14" x2="7" y2="14"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="17" y1="16" x2="23" y2="16"/></svg></span>
+          <span class="nav-label">Scenario Simulator</span>
+        </a>
+        <a class="nav-item" data-view="recommendations" href="#recommendations">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span class="nav-label">AI Recommendations</span>
+          <span class="nav-badge danger">Action</span>
+        </a>
+        <a class="nav-item" data-view="ops-copilot" href="#ops-copilot">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <span class="nav-label">Ops Copilot</span>
+        </a>
+
+        <div class="nav-section-title">GOVERNANCE</div>
+        <a class="nav-item" data-view="action-center" href="#action-center">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="nav-label">Action Center</span>
+          <span class="nav-badge amber">1 Pending</span>
+        </a>
+        <a class="nav-item" data-view="analytics" href="#analytics">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span>
+          <span class="nav-label">Analytics</span>
+        </a>
+        <a class="nav-item" data-view="audit-trail" href="#audit-trail">
+          <span class="nav-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
+          <span class="nav-label">Audit Trail</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <button class="demo-tour-launch-btn" id="demo-tour-launch-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Executive Demo Tour
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="app-main" id="app-main">
+
+      <!-- Disclaimer Bar -->
+      <div class="disclaimer-banner" role="alert">
+        <div class="disclaimer-left">
+          <span class="disclaimer-badge">DEMO PROTOTYPE</span>
+          <span>Mahindra Opsentinel AI — Conceptual operations control tower using realistic synthetic operational demo data. Not an official M&amp;M product.</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span>Tagline: <em>"Predict disruption. Protect production."</em></span>
+        </div>
+      </div>
+
+      <!-- Executive Tour Banner (Hidden until activated) -->
+      <div class="tour-banner" id="tour-banner">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span class="tour-step-pill" id="tour-step-counter">Step 1 of 11</span>
+          <span id="tour-step-desc" style="font-weight: 500;">AI detects early supplier delivery deterioration...</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <button class="btn btn-secondary btn-xs" id="tour-prev-btn">Previous</button>
+          <button class="btn btn-primary btn-xs" id="tour-next-btn">Next Step →</button>
+          <button class="btn btn-secondary btn-xs" id="tour-close-btn" style="background: transparent; color: white; border: none;">✕ Exit</button>
+        </div>
+      </div>
+
+      <!-- Top Header Navigation -->
+      <header class="app-header">
+        <div class="header-left">
+          <div class="view-mode-toggle">
+            <button class="mode-btn active" id="mode-exec-btn">Executive View</button>
+            <button class="mode-btn" id="mode-op-btn">Detailed Operational View</button>
+          </div>
+        </div>
+
+        <!-- Global Search / Command Bar -->
+        <div class="search-command-bar" id="search-command-bar" role="search">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span class="search-placeholder">Search suppliers, parts (C204), plants, risks (Ctrl+K)...</span>
+          <span class="search-shortcut">⌘K</span>
+        </div>
+
+        <div class="header-right">
+          <!-- Data Freshness Indicator -->
+          <div class="freshness-badge" id="freshness-btn" title="Click to simulate live data refresh">
+            <span class="freshness-dot"></span>
+            <span>Demo Data • Updated 8 min ago</span>
+          </div>
+
+          <!-- Notification Bell -->
+          <button class="header-icon-btn" id="notifications-btn" title="Operational Alerts & Notifications" aria-label="Notifications">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            <span class="badge-dot"></span>
+          </button>
+
+          <!-- User Profile -->
+          <div class="profile-pill">
+            <div class="profile-avatar">OP</div>
+            <span>Operations Lead</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Dynamic Page Container -->
+      <div class="page-container" id="page-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </main>
+  </div>
+
+  <!-- Global Command Modal (Search across entities) -->
+  <div class="cmd-modal-overlay" id="cmd-modal-overlay">
+    <div class="cmd-modal" role="dialog" aria-modal="true" aria-label="Command search">
+      <div class="cmd-input-row">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" color="var(--text-muted)"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="cmd-input" id="cmd-search-input" placeholder="Search suppliers (S102), components (C204), plants, risks, or concepts..." autocomplete="off">
+        <button class="btn btn-secondary btn-xs" onclick="document.getElementById('cmd-modal-overlay').classList.remove('open')">ESC</button>
+      </div>
+      <div class="cmd-results" id="cmd-results">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Global "Explain Why?" Drawer -->
+  <div class="explain-drawer-overlay" id="explain-drawer-overlay"></div>
+  <aside class="explain-drawer" id="explain-drawer" aria-label="Explain Why Drawer">
+    <div class="explain-drawer-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span class="status-pill info">AI EXPLAINABILITY</span>
+        <h3 id="explain-title" style="font-size: 15px; font-weight: 700; color: var(--text-primary);">Explain Why</h3>
+      </div>
+      <button class="header-icon-btn" id="close-explain-drawer" aria-label="Close Explain Drawer">✕</button>
+    </div>
+    <div class="explain-drawer-body" id="explain-body">
+      <!-- Populated dynamically -->
+    </div>
+  </aside>
+
+  <!-- Notifications Drawer -->
+  <div class="explain-drawer-overlay" id="notifications-overlay"></div>
+  <aside class="explain-drawer" id="notifications-drawer" aria-label="Notifications Drawer">
+    <div class="explain-drawer-header">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span class="status-pill critical">ALERT CENTER</span>
+        <h3 style="font-size: 15px; font-weight: 700;">Operational Signals</h3>
+      </div>
+      <button class="header-icon-btn" id="close-notif-btn" aria-label="Close Notifications">✕</button>
+    </div>
+    <div class="explain-drawer-body" style="padding: 0;">
+      <div style="padding: 12px 16px; background: #f8fafc; border-bottom: 1px solid var(--border-subtle); display: flex; gap: 6px;">
+        <span class="filter-chip active" style="font-size: 11px;">Critical (3)</span>
+        <span class="filter-chip" style="font-size: 11px;">High (12)</span>
+        <span class="filter-chip" style="font-size: 11px;">Medium (41)</span>
+        <span class="filter-chip" style="font-size: 11px;">Info (444)</span>
+      </div>
+      <div id="notif-list-container">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </aside>
+
+  <!-- Application Logic Scripts -->
+  <script src="data.js"></script>
+  <script src="copilot.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
