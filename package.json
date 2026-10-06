@@ -3,19 +3,12 @@
   "version": "1.0.0",
   "description": "Mahindra Opsentinel AI - Conceptual Operations Control Tower for Automotive & Manufacturing",
   "main": "index.html",
-  "scripts": {
-    "start": "python -m http.server 3000",
-    "dev": "python -m http.server 3000",
-    "build": "echo 'Static web application build complete'"
-  },
   "keywords": [
     "control-tower",
     "operations",
     "supply-chain",
     "agentic-ai",
-    "mahindra",
-    "predictive-operations",
-    "digital-twin"
+    "mahindra"
   ],
   "author": "harshavardhankosuri2002-source",
   "license": "MIT"

@@ -1,11 +1,3 @@
 {
-  "version": 2,
-  "name": "mahindra-opsentinel",
-  "cleanUrls": true,
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ]
+  "outputDirectory": "."
 }
